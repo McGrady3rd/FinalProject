@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/game.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container header">
+        <div class="game-details" id="page">
+            <div class="row">
+                <div class="col-md-6 left-box">
+                    <h1><span id="title">Nba 2k17</span> </h1>
+                    <p><span id="paragraph">Following the record-breaking launch of NBA 2K16, the NBA 2K franchise
+                            continues to stake its
+                            claim as the most authentic sports video game with NBA 2K17.</span></p>
+                    <a href="#"><i class="fa fa-gamepad"></i>Play Now</a>
+                    <a href="#" class="download-btn"><i class="fa fa-arrow-down"></i>Download</a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="../images/kobe.jpg" class="game-img" id="currentgame">
+                </div>
+            </div>
+        </div>
+        <div class="series">
+            <h3>Popular Games</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="../images/COD_Black_Ops_3.jpg" id="COD">
+                        </div>
+                        <div class="col-6">
+                            <img src="../images/Webp.net-resizeimage (1).jpg" id="2k17">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="../images/Webp.net-resizeimage (2).jpg" id="2k17">
+                        </div>
+                        <div class="col-6">
+                            <img src="../images/download (1).jpeg" id="2k17">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="../images/220px-Watch_Dogs_2.jpg" id="2k17">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#COD").on("click", function () {
+            var imageurl = "../images/COD_Black_Ops_3.jpg";
+            var bgimg = "../" + $("body").css("background-image").split(/\//).slice(-2).join("/").slice(0, -1) 
+            $("body").css("background-image", "url(" + imageurl + ")")
+            $("#currentgame").attr("src", imageurl)
+            $("#title").html("Call of Duty Black Ops 3")
+            $("#paragraph").html("Call of duty loooooooooo")
+            $("#COD").attr("src","../images/kobe.jpg")
+        })
+        $("#").on("click", function () {
+            var imageurl = "../images/kobe.jpg";
+            $("body").css("background-image", "url(" + imageurl + ")")
+        })
+    </script>
+</body>
+
+</html>

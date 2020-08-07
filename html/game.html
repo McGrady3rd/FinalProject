@@ -12,7 +12,28 @@
 </head>
 
 <body>
+   
     <div class="container header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent text-white">
+            <a class="navbar-brand" href="#">GREATNESS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="home.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Games</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         <div class="game-details" id="page">
             <div class="row">
                 <div class="col-md-6 left-box">
@@ -20,7 +41,7 @@
                     <p><span id="paragraph">Following the record-breaking launch of NBA 2K16, the NBA 2K franchise
                             continues to stake its
                             claim as the most authentic sports video game with NBA 2K17.</span></p>
-                    <a href="#"><i class="fa fa-gamepad"></i>Play Now</a>
+                    <a href="hangman.html"><i class="fa fa-gamepad"></i>Play Now</a>
                     <a href="#" class="download-btn"><i class="fa fa-arrow-down"></i>Download</a>
                 </div>
                 <div class="col-md-6 text-center">
@@ -37,24 +58,24 @@
                             <img src="../images/COD_Black_Ops_3.jpg" id="COD">
                         </div>
                         <div class="col-6">
-                            <img src="../images/Webp.net-resizeimage (1).jpg" id="2k17">
+                            <img src="../images/madden.jpg" id="madden">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="row">
                         <div class="col-6">
-                            <img src="../images/Webp.net-resizeimage (2).jpg" id="2k17">
+                            <img src="../images/Bwawlhalla.jpg" id="brawlhalla">
                         </div>
                         <div class="col-6">
-                            <img src="../images/download (1).jpeg" id="2k17">
+                            <img src="../images/fortnite.jpeg" id="fortnite">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="row">
                         <div class="col-6">
-                            <img src="../images/220px-Watch_Dogs_2.jpg" id="2k17">
+                            <img src="../images/220px-Watch_Dogs_2.jpg" id="wd2">
                         </div>
 
                     </div>
@@ -65,12 +86,52 @@
     <script>
         $("#COD").on("click", function () {
             var imageurl = "../images/COD_Black_Ops_3.jpg";
-            var bgimg = $("body").css("background-image")
-            console.log(bgimg)
+            var bgimg = "../" + $("body").css("background-image").split(/\//).slice(-2).join("/").slice(0, -1) 
             $("body").css("background-image", "url(" + imageurl + ")")
             $("#currentgame").attr("src", imageurl)
             $("#title").html("Call of Duty Black Ops 3")
-            $("#paragraph").html("Call of duty loooooooooo")
+            $("#paragraph").html("Welcome to 2065. A new breed of Black Ops soldier emerges and the lines are blurred between our own humanity and the cutting-edge military robotics that define the future of combat.")
+            $("#COD").attr("src","../images/kobe.jpg")
+        })
+        $("#madden").on("click", function () {
+            var imageurl = "../images/madden.jpg";
+            var bgimg = "../" + $("body").css("background-image").split(/\//).slice(-2).join("/").slice(0, -1) 
+            $("body").css("background-image", "url(" + imageurl + ")")
+            $("#currentgame").attr("src", imageurl)
+            $("#title").html("Madden 21")
+            $("#paragraph").html("Go all out in Madden NFL 21 with fresh new features, innovative new gameplay mechanics, and a bold new cover. Play three days early with the MVP Edition beginning August 25, 2020.")
+            $("#madden").attr("src","../images/COD_Black_Ops_3.jpg")
+            console.log("here")
+        })
+        $("#brawlhalla").on("click", function () {
+            var imageurl = "../images/Bwawlhalla.jpg";
+            var bgimg = "../" + $("body").css("background-image").split(/\//).slice(-2).join("/").slice(0, -1) 
+            $("body").css("background-image", "url(" + imageurl + ")")
+            $("#currentgame").attr("src", imageurl)
+            $("#title").html("Brawlhalla")
+            $("#paragraph").html("Brawlhalla is a free-to-play 2D fighting game developed by Blue Mammoth Games for Microsoft Windows, macOS, PlayStation 4, Xbox One, Nintendo Switch and scheduled to release for Android and iOS on August 6, 2020, with full cross-play across all platforms.")
+            $("#brawlhalla").attr("src","../images/madden.jpg")
+            console.log("here")
+        })
+        $("#fortnite").on("click", function () {
+            var imageurl = "../images/fortnite.jpeg";
+            var bgimg = "../" + $("body").css("background-image").split(/\//).slice(-2).join("/").slice(0, -1) 
+            $("body").css("background-image", "url(" + imageurl + ")")
+            $("#currentgame").attr("src", imageurl)
+            $("#title").html("Fortnite")
+            $("#paragraph").html("Discover the new Fortnite Chapter 2 Season 3 twists and Dive In today! Sharks, Build- a-Brella, fire, new enemies and much more!")
+            $("#fortnite").attr("src","../images/Bwawlhalla.jpg")
+            console.log("here")
+        })
+        $("#wd2").on("click", function () {
+            var imageurl = "../images/220px-Watch_Dogs_2.jpg";
+            var bgimg = "../" + $("body").css("background-image").split(/\//).slice(-2).join("/").slice(0, -1) 
+            $("body").css("background-image", "url(" + imageurl + ")")
+            $("#currentgame").attr("src", imageurl)
+            $("#title").html("Watch Dogs 2")
+            $("#paragraph").html("Discover the new Fortnite Chapter 2 Season 3 twists and Dive In today! Sharks, Build- a-Brella, fire, new enemies and much more!")
+            $("#wd2").attr("src","../images/fortnite.jpeg")
+            console.log("here")
         })
         $("#").on("click", function () {
             var imageurl = "../images/kobe.jpg";
